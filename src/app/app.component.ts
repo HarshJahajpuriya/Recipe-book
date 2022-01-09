@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, enableProdMode, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipe-book-and-shooping-list-app';
+  loadedFeature: string = "recipe";
+
+  constructor() {
+  }
+
+  onNavigate(feature: string): void {
+    this.loadedFeature = feature;
+  }
 }
