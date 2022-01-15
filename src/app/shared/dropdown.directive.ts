@@ -7,11 +7,12 @@ export class DropdownDirective{
 
   @HostBinding('class.open') isOpen = false;
   
-  @HostListener('click') toggleOpen(): void {
-    if(!this.isOpen) 
-      this.isOpen = true;
-    else 
-      this.isOpen = false;    
+  @HostListener('document:click', ['$event']) toggleOpen(ev: Event): void {
+    // if(!this.isOpen) this.isOpen = true;
+    // else this.isOpen = false;      
+    
+    this.isOpen = this.elementRef.nativeElement.contains(ev.target) ? !this.isOpen : false;
+    // this will close the dropdown, even if we click anywhere after opening the dropdown
     
   }
 
