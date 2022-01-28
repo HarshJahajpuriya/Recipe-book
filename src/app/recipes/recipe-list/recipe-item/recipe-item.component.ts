@@ -12,7 +12,7 @@ export class RecipeItemComponent implements OnInit {
   @Input() recipe :Recipe; 
 
   constructor(private recipeService: RecipeService) {
-    this.recipe = new Recipe('','','');
+    this.recipe = null as any;
   }
 
   ngOnInit(): void {
