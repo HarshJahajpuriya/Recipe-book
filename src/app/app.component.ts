@@ -6,12 +6,9 @@ import { Component, enableProdMode, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loadedFeature: string = "recipe";
 
   constructor() {
   }
 
-  onNavigate(feature: string): void {
-    this.loadedFeature = feature;
-  }
+  
 }

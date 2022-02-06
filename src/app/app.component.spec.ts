@@ -29,3 +29,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('recipe-book-and-shooping-list-app app is running!');
   });
 });
+ 
