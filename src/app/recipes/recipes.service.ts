@@ -36,8 +36,8 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-  getRecipe(index: number): Recipe {
-    return Object.assign({}, this.recipes[index]);
+  getRecipe(id: number): Recipe {
+    return Object.assign({}, this.recipes[id]);
   }
 
   setSelectedRecipe(recipe: Recipe): void {
